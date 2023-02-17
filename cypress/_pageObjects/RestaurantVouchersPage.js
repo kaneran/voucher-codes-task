@@ -19,7 +19,7 @@ class RestaurantVouchersPage {
 
     verifySearchSuccessful(){
         cy.url().should('contain',`${Cypress.env('baseUrl')}/restaurant-vouchers/search?`) //Confirm url updated to include search query
-        cy.get('@numberOfVouchers').then((numberOfVouchersBeforeSearch) => this.getVoucherCodeButton.its('length').should('not.equal',numberOfVouchersBeforeSearch)) // Check that number of vouchers displayed is different before and after search to determine that the search did execute and displayed it
+        cy.get('@numberOfVouchers').then((numberOfVouchersBeforeSearch) => this.getVoucherCodeButton.its('length').should('not.equal',numberOfVouchersBeforeSearch)) // Check that number of vouchers displayed is different before and after search to determine that the search did execute and displayed a different set of vouchers
     }
 }
 
