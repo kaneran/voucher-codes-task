@@ -37,4 +37,4 @@ Made it easier to encapsulate the selectors and automation code per page in Vouc
 ## Additional thoughts
 Where possible, I tried to use the data-qa attribute for the selectors as looked the most reliable. However there was one instance where I needed to locate an element using the text 'Restaurants' which I believe could be improved but I assumed this text is less likely to change over time which was why I decided to use in the end.
 
-Due to time constraints, I wanted to try and verify that the Search function resulted in the current page to update. Hence why I used the change in url and number of vouchers displayed to be two checks I wrote to verify this.
+Due to time constraints, I wanted to try and verify that the Search function resulted in the current page to update. Hence why I used the change in url and number of vouchers displayed to be the two assertions I wrote to verify this.
