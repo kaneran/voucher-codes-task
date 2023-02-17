@@ -11,8 +11,8 @@ class RestaurantVouchersPage {
     searchOffers(location, numberOfPeople){
         this.getNumberOfVouchersDisplayed()
         this.findRestaurantsVouchersButton.should('be.disabled')
-        this.locationInput.type(location).wait(1000).type('{downarrow}').type('{enter}') //Needed to wait a second for the google autocomplete to return the location
-        this.peopleDropdown.select(numberOfPeople.toString())
+        this.locationInput.should('be.visible').type(location).wait(1000).type('{downarrow}').type('{enter}') //Needed to wait a second for the google autocomplete to return the location
+        this.peopleDropdown.should('be.visible').select(numberOfPeople.toString())
         this.findRestaurantsVouchersButton.should('be.enabled').click()
         this.verifySearchSuccessful()
     }
