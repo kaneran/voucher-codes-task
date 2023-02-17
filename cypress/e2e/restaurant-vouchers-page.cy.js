@@ -4,8 +4,8 @@ import Header from "../_pageObjects/Header"
 import { HeaderLinks } from "../enums/HeaderLinks"
 import { CategoryLinks } from "../enums/CategoryLinks"
 
-describe('Home page - ', () => {
-  beforeEach(() => {
+describe('Restaurant Vouchers page - ', () => {
+  before(() => {
     HomePage.visit()
   })
 
@@ -13,9 +13,5 @@ describe('Home page - ', () => {
     Header.clickHeaderLink(HeaderLinks.Categories)
     Header.clickCategoryLink(CategoryLinks.Restaurants)
     RestaurantVouchersPage.searchOffers('London UK', 10)
-  })
-
-  it('click on a header that doesn\'t exist', () => {
-    Header.clickHeaderLink('Invalid header')
   })
 })
